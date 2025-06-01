@@ -2,37 +2,6 @@ import { BarChart, TrendingUp, Users, DollarSign } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Dashboard = () => {
-  const stats = [
-    {
-      title: 'Total Startups',
-      value: '12,847',
-      change: '+12.3%',
-      trend: 'up',
-      icon: TrendingUp,
-    },
-    {
-      title: 'Active Investors',
-      value: '3,456',
-      change: '+8.7%',
-      trend: 'up',
-      icon: Users,
-    },
-    {
-      title: 'Total Funding',
-      value: '$2.4B',
-      change: '+23.1%',
-      trend: 'up',
-      icon: DollarSign,
-    },
-    {
-      title: 'Success Rate',
-      value: '67.8%',
-      change: '+5.2%',
-      trend: 'up',
-      icon: BarChart,
-    },
-  ];
-
   return (
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,20 +14,6 @@ const Dashboard = () => {
           <p className="text-xl text-gray-600">
             Real-time insights into the global startup ecosystem
           </p>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {stats.map((stat, index) => (
-            <Card key={index} className="hover-lift border-0 shadow-lg animate-scale-in">
-              <CardContent>
-                <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-                <p className="text-xs text-green-600 font-medium">
-                  {stat.change} from last month
-                </p>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         {/* IBM Cognos Dashboard Embed */}
@@ -75,8 +30,8 @@ const Dashboard = () => {
             <div className="w-full min-h-[600px] rounded-lg overflow-hidden">
               <iframe 
                 src="https://us1.ca.analytics.ibm.com/bi/?perspective=dashboard&pathRef=.my_folders%2FNew%2Bdashboard%2Bfor%2Bmy%2Bbi%2Bproject%2B2&closeWindowOnLastView=true&ui_appbar=false&ui_navbar=false&shareMode=embedded&action=view&mode=dashboard&subView=model00000196be09f4ac_00000003" 
-                width="100%" 
-                height="600" 
+                width="320" 
+                height="200" 
                 frameBorder="0" 
                 title="IBM Cognos Analytics Dashboard"
                 className="w-full h-full"
