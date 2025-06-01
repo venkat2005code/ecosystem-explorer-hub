@@ -1,4 +1,3 @@
-
 import { BarChart, TrendingUp, Users, DollarSign } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -81,23 +80,17 @@ const Dashboard = () => {
             </CardDescription>
           </CardHeader>
           <CardContent className="p-0">
-            <div className="bg-gradient-to-br from-gray-50 to-white border-2 border-dashed border-gray-300 rounded-lg m-6">
-              <div className="flex flex-col items-center justify-center py-20 px-6 text-center">
-                <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mb-6">
-                  <BarChart className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  IBM Cognos Dashboard Integration
-                </h3>
-                <p className="text-gray-600 mb-6 max-w-md leading-relaxed">
-                  This area is designed to embed your live IBM Cognos dashboard. Once configured, 
-                  you'll see real-time analytics, interactive charts, and comprehensive startup insights.
-                </p>
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-800">
-                  <strong>Integration Ready:</strong> Connect your IBM Cognos Analytics instance 
-                  to display live startup ecosystem data, funding trends, and market analysis.
-                </div>
-              </div>
+            <div className="w-full min-h-[600px] rounded-lg overflow-hidden">
+              <iframe 
+                src="https://us1.ca.analytics.ibm.com/bi/?perspective=dashboard&pathRef=.my_folders%2FNew%2Bdashboard%2Bfor%2Bmy%2Bbi%2Bproject%2B2&closeWindowOnLastView=true&ui_appbar=false&ui_navbar=false&shareMode=embedded&action=view&mode=dashboard&subView=model00000196be09f4ac_00000003" 
+                width="100%" 
+                height="600" 
+                frameBorder="0" 
+                title="IBM Cognos Analytics Dashboard"
+                className="w-full h-full"
+                allow="encrypted-media"
+                allowFullScreen
+              />
             </div>
           </CardContent>
         </Card>
